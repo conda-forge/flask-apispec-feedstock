@@ -1,6 +1,6 @@
 {% set name = "flask-apispec" %}
-{% set version = "0.3.2" %}
-{% set sha256 = "bae0a26b68ebdf7ee0769dc23c3a3326ebd9cdd8bc79f72f67aec53ba9ddd42a" %}
+{% set version = "0.4.0" %}
+{% set sha256 = "72b2ff1df8230054cea6770fa2df1f26918f8d8dcfdeb9057b9419b2b19ec67d" %}
 
 package:
   name: {{ name|lower }}
@@ -12,7 +12,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1
+  number: 0
   script: python setup.py install --single-version-externally-managed --record record.txt
 
 requirements:
@@ -25,7 +25,7 @@ requirements:
     - flask >=0.10.1
     - marshmallow >=2.0.0
     - webargs >=0.18.0
-    - apispec >=0.4.1,<0.20.0
+    - apispec >=0.20.0
 
 test:
   imports:
