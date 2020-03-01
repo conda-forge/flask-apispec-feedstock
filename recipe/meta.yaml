@@ -1,6 +1,6 @@
 {% set name = "flask-apispec" %}
-{% set version = "0.8.5" %}
-{% set sha256 = "f76d001bfc3088bd0cdad14dc929284875666b41e9cf0d30cd03bb5b6ea288ed" %}
+{% set version = "0.8.6" %}
+{% set sha256 = "9116681983a30255dfee05f74a2ef13f9bc56326dc9bffc4024f61fc555b0cdb" %}
 
 package:
   name: {{ name|lower }}
@@ -14,10 +14,10 @@ source:
 build:
   noarch: python
   number: 0
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
-  build:
+  host:
     - python
     - pip
   run:
@@ -25,7 +25,7 @@ requirements:
     - six >=1.9.0
     - flask >=0.10.1
     - marshmallow >=2.0.0
-    - webargs >=0.18.0
+    - webargs >=0.18.0,<6.0.0
     - apispec >=1.0.0
 
 test:
@@ -37,14 +37,14 @@ about:
   license: MIT
   license_family: MIT
   license_file: LICENSE
-  summary: 'Build and document REST APIs with Flask and apispec'
+  summary: Build and document REST APIs with Flask and apispec
 
   description: |
-      flask-apispec is a lightweight tool for building REST APIs in Flask. 
-      flask-apispec uses webargs for request parsing, marshmallow for response
-      formatting, and apispec to automatically generate Swagger markup.
-      You can use flask-apispec with vanilla Flask or a fuller-featured
-      framework like Flask-RESTful.
+    flask-apispec is a lightweight tool for building REST APIs in Flask. 
+    flask-apispec uses webargs for request parsing, marshmallow for response
+    formatting, and apispec to automatically generate Swagger markup.
+    You can use flask-apispec with vanilla Flask or a fuller-featured
+    framework like Flask-RESTful.
   doc_url: https://flask-apispec.readthedocs.org/en/latest/
   dev_url: https://github.com/jmcarp/flask-apispec
 
