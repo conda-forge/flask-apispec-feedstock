@@ -1,6 +1,6 @@
 {% set name = "flask-apispec" %}
-{% set version = "0.9.0" %}
-{% set sha256 = "64c3f528dbf3e78ca7f3d6c695a1e8b788a87f0f4f4ce5c19070649a8f807856" %}
+{% set version = "0.10.0" %}
+{% set sha256 = "f91fceb66d747978a2992f4e940cbd2379eaa156e8b8eae200791eee7af136be" %}
 
 package:
   name: {{ name|lower }}
