@@ -5,7 +5,7 @@ Home: https://github.com/jmcarp/flask-apispec
 
 Package license: MIT
 
-Feedstock license: BSD 3-Clause
+Feedstock license: BSD-3-Clause
 
 Summary: Build and document REST APIs with Flask and apispec
 
