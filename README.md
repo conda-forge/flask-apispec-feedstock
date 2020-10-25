@@ -5,9 +5,13 @@ Home: https://github.com/jmcarp/flask-apispec
 
 Package license: MIT
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/flask-apispec-feedstock/blob/master/LICENSE.txt)
 
 Summary: Build and document REST APIs with Flask and apispec
+
+Development: https://github.com/jmcarp/flask-apispec
+
+Documentation: https://flask-apispec.readthedocs.org/en/latest/
 
 flask-apispec is a lightweight tool for building REST APIs in Flask.
 flask-apispec uses webargs for request parsing, marshmallow for response
