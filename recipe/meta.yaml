@@ -1,6 +1,6 @@
 {% set name = "flask-apispec" %}
-{% set version = "0.10.0" %}
-{% set sha256 = "f91fceb66d747978a2992f4e940cbd2379eaa156e8b8eae200791eee7af136be" %}
+{% set version = "0.11.0" %}
+{% set sha256 = "89e05dd2cb6e91ad999033c59aed4b5036aea9f0794d5ea5d9082be8ad4a99f2" %}
 
 package:
   name: {{ name|lower }}
@@ -18,14 +18,14 @@ build:
 
 requirements:
   host:
-    - python >=3.5
+    - python >=3.6
     - pip
   run:
-    - python >=3.5
+    - python >=3.6
     - flask >=0.10.1
     - marshmallow >=3.0.0
     - webargs >=6.0.0
-    - apispec >=1.0.0
+    - apispec >=4.0.0
 
 test:
   imports:
