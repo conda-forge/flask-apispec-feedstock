@@ -1,35 +1,39 @@
 {% set name = "flask-apispec" %}
 {% set version = "0.11.4" %}
-{% set sha256 = "9a6fedd3a06510a8a19340df676393b336b4ba9d5c159cbb304b62672e3115da" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.tar.gz
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: {{ sha256 }}
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 9a6fedd3a06510a8a19340df676393b336b4ba9d5c159cbb304b62672e3115da
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
-    - python >=3.6
+    - python {{ python_min }}
+    - setuptools
     - pip
   run:
-    - python >=3.6
+    - python >={{ python_min }}
     - flask >=0.10.1
     - marshmallow >=3.0.0
     - webargs >=6.0.0
     - apispec >=4.0.0
 
 test:
+  requires:
+    - python {{ python_min }}
+    - pip
   imports:
     - flask_apispec
+  commands:
+    - pip check
 
 about:
   home: https://github.com/jmcarp/flask-apispec
